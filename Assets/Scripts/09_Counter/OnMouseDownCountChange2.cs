@@ -1,14 +1,14 @@
-﻿using Unity.VisualScripting;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 // タッチすると、カウントを変更する
-public class OnMouseDownCountChange : MonoBehaviour 
+public class OnMouseDownCountChange2 : MonoBehaviour
 {
-	//-------------------------------------
-	public CounterType kind = CounterType.Keys; //［カウンターの種類］
-	public int addValue = 1; //［増加量］
-	//-------------------------------------
+    //---------------------------------------
+    public CounterType2 kind = CounterType2.Keys; // [カウンターの種類]
+    public int addValue = 1; // [増加量]
+    //---------------------------------------
 
     void Update()
     {
@@ -19,8 +19,8 @@ public class OnMouseDownCountChange : MonoBehaviour
             var hit = Physics2D.GetRayIntersection(ray, 100f, 1 << gameObject.layer);
             if (hit.collider && hit.collider.gameObject == gameObject)
             {
-				// カウンターの値を変更する
-				GameCounter.counters[kind] = GameCounter.counters[kind] + addValue;
+                // カウンターの値を変更する
+                GameCounter2.counters[kind] = GameCounter2.counters[kind] + addValue;
             }
         }
     }

@@ -6,16 +6,16 @@ using UnityEngine;
 public class GameCounter2 : MonoBehaviour
 {
     //-------------------------------------
-    public CounterType kind = CounterType.Keys; // [カウンターの種類]
+    public CounterType2 kind = CounterType2.Keys; // [カウンターの種類]
     public int startCount = 0; // [初期値] 
     //-------------------------------------
-    public static Dictionary<CounterType, int> counters = new Dictionary<CounterType, int>();
+    public static Dictionary<CounterType2, int> counters = new Dictionary<CounterType2, int>();
 
     void Start()
     {
         counters[kind] = startCount;
     }
 }
-public enum Counter2Type { // カウンターの種類
+public enum CounterType2 { // カウンターの種類
     Keys, Hearts, Miss, Score, Gold, ItemA, ItemB, ItemC
 }
